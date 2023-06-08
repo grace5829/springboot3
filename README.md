@@ -4,6 +4,21 @@ what is pom.xml?
 pom is a XML file that contains information about the project and configuration details used by Maven to build the project. When executing a task or goal, Maven looks for the POM in the current directory. It reads the POM, gets the needed configuration information, then executes the goal
 
 
+What is tomcat?
+Provides a pure java HTTP web server environment in which Java code can also run. It is a Java web application server
+
+
+Spring beans- 
+an instance of a class that is managed by the spring container.
+-each component in the spring application is a bean. 
+
+Spring container- respinsible for managing all the beans; performs dependency injection
+
+
+
+
+
+
 
 
 Spring boot folder layouts 
