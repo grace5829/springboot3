@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,8 +28,16 @@ public class Main {
 
     //http GET request 
     @GetMapping("/greet")
-    public String greet() {
+    public GreetResponse greet() {
         // System.out.println("test");
-        return "Hello";
+
+        // gives JSON return with 3 keys, 3 values; 1st value is string Hello, 
+        //2nd value is array with length=3 
+        //3rd value is object with 2 keys 
+        return new GreetResponse("Hello", List.of("Javascript", "React", "CSS"), new Person("Alex", 20));
     }
+
+    record Person(String name, int age){}
+    // makes a object with key test and value is input in function
+    record GreetResponse(String greet, List<String> favProgrammingLanguages, Person person){}
 }
